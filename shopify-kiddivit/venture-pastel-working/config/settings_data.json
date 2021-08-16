@@ -1,0 +1,582 @@
+{
+  "current": {
+    "color_header_bg": "#ecf7de",
+    "color_header_links": "#041e8b",
+    "color_body_bg": "#f7f7f7",
+    "color_content_bg": "#fff",
+    "color_body_headings": "#030303",
+    "color_body_text": "#666",
+    "color_button_bg": "#ffc900",
+    "color_button_text": "#041e8b",
+    "color_footer_bg": "#ecf7de",
+    "color_footer_text": "#041e8b",
+    "color_hero_text": "#e70685",
+    "color_hero_bg": "#f7f7f7",
+    "type_accent_family": "unica_one_n4",
+    "type_accent_spacing": true,
+    "type_accent_transform": true,
+    "type_base_family": "karla_n4",
+    "type_base_size": "16px",
+    "type_nav_size": "14px",
+    "type_nav_spacing": true,
+    "type_nav_transform": true,
+    "product_images_padding": false,
+    "product_vendor_enable": false,
+    "social_facebook_link": "https:\/\/www.facebook.com\/Kiddivit\/",
+    "social_twitter_link": "https:\/\/twitter.com\/kiddivitUSA",
+    "social_pinterest_link": "https:\/\/www.pinterest.com\/kiddivit\/",
+    "social_instagram_link": "https:\/\/www.instagram.com\/kiddivit\/",
+    "favicon": "shopify:\/\/shop_images\/Favicon_Simple.png",
+    "checkout_accent_color": "#006eff",
+    "checkout_button_color": "#006eff",
+    "checkout_banner_background_color": "#fff",
+    "checkout_call_to_action_color": "#006eff",
+    "checkout_use_header_image": false,
+    "color_newsletter_input": "#1a1a1a",
+    "sections": {
+      "slideshow": {
+        "type": "slideshow",
+        "blocks": {
+          "placeholder-0": {
+            "type": "slide",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/people-smile-at-a-small-baby-the-woman-is-holding-up.jpg",
+              "image_position": "center center",
+              "title": "A healthy start!",
+              "button_label": "Let's start today for a healthy tomorrow",
+              "button_link": "shopify:\/\/collections\/all"
+            }
+          },
+          "placeholder-1": {
+            "type": "slide",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/father-holding-baby-daughter.jpg",
+              "image_position": "center center",
+              "title": "Nutritions every baby needs",
+              "button_label": "Shop now",
+              "button_link": "shopify:\/\/collections\/all"
+            }
+          }
+        },
+        "block_order": [
+          "placeholder-0",
+          "placeholder-1"
+        ],
+        "settings": {
+          "hero_home_height": "small",
+          "hero_home_auto": true,
+          "hero_home_auto_speed": 5
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "blocks": {
+          "linklist": {
+            "type": "menu",
+            "settings": {
+              "link_list": "navigation"
+            }
+          },
+          "f29b8cb9-93a5-45a6-8da3-d2aad909a240": {
+            "type": "menu",
+            "settings": {
+              "link_list": "resources"
+            }
+          },
+          "social": {
+            "type": "social",
+            "settings": {
+              "title": "Follow us",
+              "align": "left"
+            }
+          },
+          "7bd831aa-3f72-4be5-b1cc-b559483dba23": {
+            "type": "QR",
+            "settings": {
+              "qr_code": "shopify:\/\/shop_images\/Business_Whatsapp_QR_Code_BLACK.png",
+              "qr_code_title": "We're on whatsapp :)",
+              "qr_code_text": "Connect with us for any questions related to our products, baby care, we will gladly help you out!"
+            }
+          }
+        },
+        "block_order": [
+          "linklist",
+          "f29b8cb9-93a5-45a6-8da3-d2aad909a240",
+          "social",
+          "7bd831aa-3f72-4be5-b1cc-b559483dba23"
+        ],
+        "settings": {
+          "disclaimer_text": "<p><em>*These Statements Have Not Been Evaluated By The Food And Drug Administration. These Products Are Not Intended To Diagnose, Treat, Cure, Or Prevent Any Disease.<\/em><\/p>",
+          "show_payment_icons": true
+        }
+      },
+      "featured-collections": {
+        "type": "featured-collections",
+        "disabled": true,
+        "blocks": {
+          "featured-collections-0": {
+            "type": "collection",
+            "settings": {
+              "collection": ""
+            }
+          },
+          "featured-collections-1": {
+            "type": "collection",
+            "settings": {
+              "collection": ""
+            }
+          },
+          "featured-collections-2": {
+            "type": "collection",
+            "settings": {
+              "collection": ""
+            }
+          }
+        },
+        "block_order": [
+          "featured-collections-0",
+          "featured-collections-1",
+          "featured-collections-2"
+        ],
+        "settings": {
+          "stretch_collection_image": false
+        }
+      },
+      "featured-products": {
+        "type": "featured-products",
+        "settings": {
+          "collection": "essential-product-line",
+          "rows": 3
+        }
+      },
+      "image-content": {
+        "type": "image-content",
+        "blocks": {
+          "image-content-0": {
+            "type": "image_block",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/tanaphong-toochinda-GagC07wVvck-unsplash.jpg"
+            }
+          },
+          "image-content-1": {
+            "type": "text_block",
+            "settings": {
+              "title": "Formulated for the Early Years",
+              "text": "<p>We meticulously developed our baby liquid drops with the highest quality ingredients and safest packaging for your baby’s most crucial growth period. We solemnly promise to ensure the purity and potency in each of our product so your baby will have <em>A Healthy Start<\/em>!<\/p>",
+              "align": "left"
+            }
+          }
+        },
+        "block_order": [
+          "image-content-0",
+          "image-content-1"
+        ],
+        "settings": {}
+      },
+      "header": {
+        "type": "header",
+        "blocks": {
+          "0bdca68a-eaaa-4017-a541-16de1a6fe6c3": {
+            "type": "link",
+            "settings": {
+              "nav_claim_link": "Free Shipping",
+              "nav_claim_url": "shopify:\/\/pages\/shipping-returns"
+            }
+          },
+          "b1319ec1-2855-46a8-9d38-bb1e830b3529": {
+            "type": "link",
+            "settings": {
+              "nav_claim_link": "24\/7 Customer Care",
+              "nav_claim_url": "shopify:\/\/pages\/contact"
+            }
+          },
+          "1156ca0c-f3fc-4c08-877a-7b3af1efa61e": {
+            "type": "link",
+            "settings": {
+              "nav_claim_link": "Happiness Guaranteed",
+              "nav_claim_url": "shopify:\/\/pages\/refunds"
+            }
+          }
+        },
+        "block_order": [
+          "0bdca68a-eaaa-4017-a541-16de1a6fe6c3",
+          "b1319ec1-2855-46a8-9d38-bb1e830b3529",
+          "1156ca0c-f3fc-4c08-877a-7b3af1efa61e"
+        ],
+        "settings": {
+          "logo_max_width": "300",
+          "main_linklist": "main-menu",
+          "promo_bar_enable": true,
+          "promo_bar_text": "Save 20% when mix & match any 4 bottles. Apply \"BUNDLE20\" at checkout!",
+          "promo_bar_link": "shopify:\/\/collections\/all"
+        }
+      },
+      "collection-filters": {
+        "type": "collection-filters",
+        "settings": {
+          "product_tags_enable": true,
+          "product_sorting_enable": true
+        }
+      },
+      "product-template": {
+        "type": "product-template",
+        "settings": {
+          "enable_ajax": true,
+          "stock_enable": false,
+          "enable_payment_button": true,
+          "social_sharing_products": true
+        }
+      },
+      "product-recommendations": {
+        "type": "product-recommendations",
+        "settings": {
+          "show_product_recommendations": true,
+          "heading": "You may also like"
+        }
+      },
+      "featured-products-subsection": {
+        "type": "featured-products-subsection",
+        "settings": {
+          "collection": ""
+        }
+      },
+      "162696271178f6a8f7": {
+        "type": "featured-products-essential-line",
+        "settings": {
+          "collection": "essential-product-line",
+          "rows": 3
+        }
+      },
+      "1626970967db41e852": {
+        "type": "brand-list-our-advantage",
+        "blocks": {
+          "1626970967db41e852-0": {
+            "type": "logo",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Inulin-no-text.png",
+              "heading": "Inulin",
+              "caption": "<p>Fiber & Prebiotic Source<\/p>",
+              "link": "shopify:\/\/pages\/our-advantage"
+            }
+          },
+          "1626970967db41e852-1": {
+            "type": "logo",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/glass-no-text.png",
+              "heading": "Glass Bottle",
+              "caption": "<p>Free of Harmful Chemicals<\/p>",
+              "link": "shopify:\/\/pages\/our-advantage"
+            }
+          },
+          "1626970967db41e852-2": {
+            "type": "logo",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/no-sugar-no-text.png",
+              "heading": "Sugar Free",
+              "caption": "<p>Healthy & Safe<\/p>",
+              "link": "shopify:\/\/pages\/our-advantage"
+            }
+          },
+          "d8589923-7024-439c-91e4-9defcacc57d3": {
+            "type": "logo",
+            "disabled": true,
+            "settings": {
+              "heading": "",
+              "caption": "",
+              "link": ""
+            }
+          }
+        },
+        "block_order": [
+          "1626970967db41e852-0",
+          "1626970967db41e852-1",
+          "1626970967db41e852-2",
+          "d8589923-7024-439c-91e4-9defcacc57d3"
+        ],
+        "settings": {
+          "title": "Our advantage"
+        }
+      },
+      "162697491087efed82": {
+        "type": "brand-list-safe-and-effective",
+        "blocks": {
+          "162697491087efed82-0": {
+            "type": "logo",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/icons-11.png",
+              "heading": "",
+              "caption": "",
+              "link": ""
+            }
+          },
+          "162697491087efed82-1": {
+            "type": "logo",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/icons-12.png",
+              "heading": "",
+              "caption": "",
+              "link": ""
+            }
+          },
+          "162697491087efed82-2": {
+            "type": "logo",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/icons-04.png",
+              "heading": "",
+              "caption": "",
+              "link": ""
+            }
+          },
+          "d37f83ff-03b2-4179-bab6-5bb9eaeacfa7": {
+            "type": "logo",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/icons-14.png",
+              "heading": "",
+              "caption": "",
+              "link": ""
+            }
+          },
+          "ce0f6020-1e95-471b-a496-9b05531b22fe": {
+            "type": "logo",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/icons-09.png",
+              "heading": "",
+              "caption": "",
+              "link": ""
+            }
+          },
+          "3ac9407c-0cd8-4050-a168-c9ef12a000a8": {
+            "type": "logo",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/icons-07.png",
+              "heading": "",
+              "caption": "",
+              "link": ""
+            }
+          }
+        },
+        "block_order": [
+          "162697491087efed82-0",
+          "162697491087efed82-1",
+          "162697491087efed82-2",
+          "d37f83ff-03b2-4179-bab6-5bb9eaeacfa7",
+          "ce0f6020-1e95-471b-a496-9b05531b22fe",
+          "3ac9407c-0cd8-4050-a168-c9ef12a000a8"
+        ],
+        "settings": {
+          "title": "Safe and effective",
+          "subtitle": "No Metallic Aftertaste",
+          "content": "We made sure our products taste great so your baby will smile every time they see it.",
+          "button": "Browse all products",
+          "button_url": "shopify:\/\/collections\/all"
+        }
+      },
+      "16273290908749a31c": {
+        "type": "instafeed",
+        "settings": {
+          "heading_font": "helvetica_n4",
+          "heading_size": 20,
+          "feed_width": 95,
+          "html_area": "<h1 style=\"width:95%; margin: 0 auto; text-align: center\">Follow us on Instagram<\/h1>"
+        }
+      },
+      "16275096004789454b": {
+        "type": "featured-content-mission",
+        "settings": {
+          "content": "Kiddivit is on a GLOBAL mission to provide every baby the ESSENTIAL vitamins & nutrients they need to grow strong, healthy, and happy!",
+          "title": "Our mission",
+          "subtext": "Shop now",
+          "link": "",
+          "image": "shopify:\/\/shop_images\/mi-pham-FtZL0r4DZYk-unsplash.jpg",
+          "image_align": "center center"
+        }
+      }
+    },
+    "content_for_index": [
+      "slideshow",
+      "image-content",
+      "1626970967db41e852",
+      "162696271178f6a8f7",
+      "162697491087efed82",
+      "16275096004789454b",
+      "16273290908749a31c"
+    ]
+  },
+  "presets": {
+    "Snowboards": {
+      "checkout_accent_color": "#006eff",
+      "checkout_banner_background_color": "#fff",
+      "checkout_button_color": "#006eff",
+      "checkout_call_to_action_color": "#006eff",
+      "checkout_use_header_image": false,
+      "color_body_bg": "#f7f7f7",
+      "color_body_headings": "#030303",
+      "color_body_text": "#666",
+      "color_button_bg": "#006eff",
+      "color_button_text": "#fff",
+      "color_content_bg": "#fff",
+      "color_footer_bg": "#030303",
+      "color_footer_text": "#fff",
+      "color_header_bg": "#030303",
+      "color_header_links": "#fff",
+      "color_hero_bg": "#006eff",
+      "color_hero_text": "#fff",
+      "color_newsletter_input": "#1a1a1a",
+      "type_accent_family": "unica_one_n4",
+      "type_accent_spacing": true,
+      "type_accent_transform": true,
+      "type_base_family": "karla_n4",
+      "type_base_size": "16px",
+      "type_nav_size": "14px",
+      "type_nav_spacing": true,
+      "type_nav_transform": true,
+      "sections": {
+        "slideshow": {
+          "type": "slideshow",
+          "blocks": {
+            "placeholder-0": {
+              "type": "slide",
+              "settings": {}
+            },
+            "placeholder-1": {
+              "type": "slide",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "placeholder-0",
+            "placeholder-1"
+          ],
+          "settings": {}
+        },
+        "footer": {
+          "type": "footer",
+          "blocks": {
+            "linklist": {
+              "type": "menu",
+              "settings": {}
+            },
+            "social": {
+              "type": "social",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "linklist",
+            "social"
+          ],
+          "settings": {}
+        },
+        "featured-collections": {
+          "type": "featured-collections",
+          "blocks": {
+            "featured-collections-0": {
+              "type": "collection",
+              "settings": {}
+            },
+            "featured-collections-1": {
+              "type": "collection",
+              "settings": {}
+            },
+            "featured-collections-2": {
+              "type": "collection",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "featured-collections-0",
+            "featured-collections-1",
+            "featured-collections-2"
+          ],
+          "settings": {}
+        },
+        "featured-products": {
+          "type": "featured-products",
+          "settings": {
+            "collection": "frontpage"
+          }
+        },
+        "image-content": {
+          "type": "image-content",
+          "blocks": {
+            "image-content-0": {
+              "type": "image_block",
+              "settings": {}
+            },
+            "image-content-1": {
+              "type": "text_block",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "image-content-0",
+            "image-content-1"
+          ],
+          "settings": {}
+        }
+      },
+      "content_for_index": [
+        "slideshow",
+        "featured-collections",
+        "featured-products",
+        "image-content"
+      ]
+    },
+    "Outdoors": {
+      "checkout_accent_color": "#f4743c",
+      "checkout_banner_background_color": "#fff",
+      "checkout_button_color": "#f4743c",
+      "checkout_call_to_action_color": "#f4743c",
+      "checkout_use_header_image": false,
+      "color_body_bg": "#f7f7f7",
+      "color_body_headings": "#1a1a1a",
+      "color_body_text": "#666",
+      "color_button_bg": "#c04f1d",
+      "color_button_text": "#fff",
+      "color_content_bg": "#ffffff",
+      "color_footer_bg": "#213236",
+      "color_footer_text": "#fff",
+      "color_header_bg": "#213236",
+      "color_header_links": "#ffffff",
+      "color_hero_bg": "#f4743c",
+      "color_hero_text": "#fff",
+      "color_newsletter_input": "#425154",
+      "type_accent_family": "lora_n7",
+      "type_accent_spacing": false,
+      "type_accent_transform": false,
+      "type_base_family": "roboto_n4",
+      "type_base_size": "14px",
+      "type_nav_size": "15px",
+      "type_nav_spacing": false,
+      "type_nav_transform": false
+    },
+    "Boxing": {
+      "checkout_accent_color": "#d8232f",
+      "checkout_banner_background_color": "#fff",
+      "checkout_button_color": "#d8232f",
+      "checkout_call_to_action_color": "#d8232f",
+      "checkout_use_header_image": false,
+      "color_body_bg": "#f0f0f0",
+      "color_body_headings": "#222222",
+      "color_body_text": "#666",
+      "color_button_bg": "#d8232f",
+      "color_button_text": "#fff",
+      "color_content_bg": "#ffffff",
+      "color_footer_bg": "#222222",
+      "color_footer_text": "#ffffff",
+      "color_header_bg": "#222222",
+      "color_header_links": "#ffffff",
+      "color_hero_bg": "#d8232f",
+      "color_hero_text": "#fff",
+      "color_newsletter_input": "#303030",
+      "type_accent_family": "open_sans_condensed_n7",
+      "type_accent_spacing": false,
+      "type_accent_transform": true,
+      "type_base_family": "source_sans_pro_n4",
+      "type_base_size": "17px",
+      "type_nav_size": "14px",
+      "type_nav_spacing": true,
+      "type_nav_transform": true
+    }
+  }
+}

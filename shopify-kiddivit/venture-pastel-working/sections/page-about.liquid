@@ -1,0 +1,184 @@
+<div class="section-page-about">
+  <div class="single-page__content grid">
+    <div class="h1--mini section-block__title content-heading grid__item medium-up--one-third">
+      <p>{{ section.settings.title }}</p>
+      <div>
+        <img src="{{ section.settings.image | img_url: 'master' }}" alt="">
+      </div>
+    </div>
+    <div class="content-text grid__item medium-up--two-thirds">
+      {{ section.settings.content }}
+    </div>
+  </div>
+
+  {% if section.blocks != blank %}
+    <div class="image-gallery">
+      {% for block in section.blocks %}
+      <div class="g-image item-{{forloop.index }}">
+        <a href={{ block.settings.g_image_url }}><img src="{{ block.settings.g_image | img_url: '400x' }}" alt=""></a>
+      </div>
+      {% endfor %}
+    </div>
+  {% endif %}
+</div>
+
+<style>
+  .main-content {
+    margin-top: 0px;
+  }
+  .content-text {
+    padding: 7%;
+    border: 5px solid #ffc900;
+    border-radius: 30px;
+    text-align: justify;
+    background-color: white;
+  }
+
+  .section-block__title {
+    text-align: center;
+    padding: 2rem;
+    text-align: center;
+    color: green;
+    font-weight: 500;
+  }
+  
+  .section-block__title p {
+    padding-bottom: 1rem;
+  }
+
+  @media (min-width: 750px) {
+    .section-block__title p {
+      border-bottom: 5px solid #ffc900;
+    }
+  }
+
+  .image-gallery {
+    margin: 5rem;
+  }
+  .g-image {
+    margin: 1.5rem;
+  }
+  .g-image img {
+    border: 6px solid #fff;
+  }
+  .slick-slide {
+    opacity: 0.5;
+  }
+
+  .slick-current {
+    opacity: 1 !important;
+    transform: scale(1.12);
+    transition-duration: 0.5s;
+  }
+
+  .slick-next:before {
+    content: "\25b6";
+  }
+  .slick-prev:before {
+    content: "\25C0";
+    margin-left: -2rem;
+  } 
+  .slick-prev:before, .slick-next:before {
+    height: 50px;
+    color: #e70685;
+    font-size: 2rem;
+    border: 2px solid #e70685;
+    padding: 3rem 0;
+  }
+
+  /* .image-gallery {
+    padding: 5rem;
+    display: grid;
+    grid-template-columns: 0.5fr 0.1fr 0.7fr 0.1fr 1fr 0.1fr 0.7fr 0.1fr 0.5fr;
+    grid-template-rows: 0.5fr 1fr 1fr 1fr 1fr 0.5fr;
+  }
+
+  .g-image.item-1 {
+
+    grid-column: 1/2;
+    grid-row: 3/5;
+
+  }
+  .g-image.item-2 {
+
+    grid-column: 3/4;
+    grid-row: 2/6;
+
+  }
+  .g-image.item-3 {
+
+    grid-column: 5/6;
+    grid-row: 1/7;
+
+  }
+  .g-image.item-4 {
+
+    grid-column: 7/8;
+    grid-row: 2/6;
+
+  }
+  .g-image.item-5 {
+
+    grid-column: 9/10;
+    grid-row: 3/5;
+
+  } */
+
+</style>
+
+
+
+{% schema %}
+{
+  "name": {
+    "en": "Page About"
+  },
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Page Heading",
+      "default": "Page"
+    },
+    {
+      "type": "html",
+      "id": "content",
+      "label": "Page Content",
+      "default": "Write something about your brand"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "image",
+      "name": "Image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "g_image",
+          "label": "Gallery Image"
+        },
+        {
+          "type": "url",
+          "id": "g_image_url",
+          "label": "Product URL"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Gallery Image",
+      "blocks": [
+        {
+          "type": "image"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

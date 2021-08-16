@@ -1,0 +1,43 @@
+<div class="page-width">
+  <div class="list-ingredients grid">
+    {% assign ingredients = product.metafields.global.ingredients.data %}
+    {% for i in ingredients %}
+    <div class="grid__item medium-up--one-third small--one-whole">
+          <div class="ingredient-item ingredient__image">
+            <img src="{{ i.image }}"></img>
+          </div>
+          <div class="ingredient-item ingredient__label">
+            {{ i.label }}
+          </div>
+          <div class="ingredient-item ingredient__desc">
+            {{ i.description }}
+          </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+<style>
+  .ingredient-item {
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0;
+    text-align: center;
+  }
+  .list-ingredients {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .list-ingredients .grid__item {
+    padding: 0 2rem;
+    margin: 1rem 0;
+  }
+  .list-ingredients img {
+    max-width: 150px;
+  }
+  .ingredient-item.ingredient__label {
+    color: #041e8b;
+        font-weight: bold;
+  }
+</style>

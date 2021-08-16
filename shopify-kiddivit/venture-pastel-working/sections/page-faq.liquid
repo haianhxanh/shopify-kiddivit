@@ -1,0 +1,200 @@
+<div class="section-page-faq">
+  <div class="single-page__content grid">
+    <div class="h1--mini section-block__title content-heading grid__item medium-up--one-third">
+      <p>{{ section.settings.title }}</p>
+      <div>
+        <img src="{{ section.settings.image | img_url: 'master' }}" alt="">
+      </div>
+    </div>
+    <div class="content-text grid__item medium-up--two-thirds">
+      {% assign faqs = pages['faq'].metafields.global.faq.data %}
+      {% for faq in faqs %}
+
+        <details>
+        <summary><p>{{ faq.q }}</p></summary>
+          <ul class="faq-list faq-item">
+            {{ faq.a }}
+          </ul>
+        </details>  
+
+      {% endfor %}
+
+    </div>
+  </div>
+
+
+
+</div>
+
+<style>
+  .main-content {
+    margin-top: 0px;
+  }
+  .content-text {
+    padding: 2rem 0;
+    /* border: 5px solid #ffc900; */
+    border-radius: 30px;
+    text-align: justify;
+    /* background-color: white; */
+  }
+
+  .section-block__title {
+    text-align: center;
+    padding: 2rem;
+    text-align: center;
+    color: green;
+    font-weight: 500;
+  }
+  
+  .section-block__title p {
+    padding-bottom: 1rem;
+  }
+
+  @media (min-width: 750px) {
+    .section-block__title p {
+      border-bottom: 5px solid #ffc900;
+    }
+  }
+
+  .image-gallery {
+    margin: 5rem;
+  }
+  .g-image {
+    margin: 1.5rem;
+  }
+  .g-image img {
+    border: 6px solid #fff;
+  }
+
+
+  summary {
+    font-size: 1.1rem;
+    font-weight: 500;
+    /* background-color: #fff; */
+    padding: 1rem 0.5rem;
+    /* margin-bottom: 1rem; */
+    outline: none;
+    border-radius: 0.25rem;
+    text-align: left;
+    cursor: pointer;
+    position: relative;
+  }
+
+  summary p {
+    margin-right: 1rem;
+  }
+
+  details {
+    border-bottom: 1.5px solid #e70685; 
+  }
+
+  details > summary::before {
+    position: absolute;
+    content: "\25B8";
+    right: 20px;
+    color: #e70685;
+  }
+  details[open] > summary::before {
+    position: absolute;
+    content: "\25BE";
+    right: 20px;
+    color: #e70685;
+  }
+  details > summary::-webkit-details-marker {
+    display: none;
+  }
+
+  details[open] summary ~ * {
+    animation: sweep 0.5s ease-in-out;
+  }
+
+  @keyframes sweep {
+    0% {
+      opacity: 0;
+      margin-top: -10px;
+    }
+    100% {
+      opacity: 1;
+      margin-top: 0px;
+    }
+  }
+
+  .faq-list.faq-item {
+    padding: 0rem 2rem 2rem;
+    color: #041e8b;
+  }
+
+  a {
+    color: #e70685;
+  }
+
+  .h1--mini a {
+    text-decoration: underline;
+  }
+
+  .h1--mini a:hover {
+    color: #008000;
+  }
+
+  .h1--mini {
+    font-size: 1.4rem;
+  }
+
+</style>
+
+
+
+{% schema %}
+{
+  "name": {
+    "en": "Page FAQ"
+  },
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Page Heading",
+      "default": "Page"
+    },
+    {
+      "type": "html",
+      "id": "content",
+      "label": "Page Content",
+      "default": "Write something about your brand"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "image",
+      "name": "Image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "g_image",
+          "label": "Gallery Image"
+        },
+        {
+          "type": "url",
+          "id": "g_image_url",
+          "label": "Product URL"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Gallery Image",
+      "blocks": [
+        {
+          "type": "image"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
