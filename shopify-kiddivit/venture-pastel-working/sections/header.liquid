@@ -117,6 +117,8 @@
         {% else %}
           </div>
         {% endif %}
+
+        <p class="shop-type">{{ section.settings.shop_type }}</p>
       </div>
 
       <div class="grid__item small--one-quarter medium-up--one-third text-right">
@@ -297,6 +299,11 @@
     "zh-TW": "標頭"
   },
   "settings": [
+    {
+      "type": "text",
+      "id": "shop_type",
+      "label": "Shop Type"
+    },
     {
       "type": "image_picker",
       "id": "logo",

@@ -17,6 +17,7 @@
   <div class="grid product-single">
     <div class="grid__item {% if product.images.size > 1 %}medium-up--three-fifths{% else %}medium-up--one-half{% endif %}">
       <h1 itemprop="name" class="product-single__title medium-up--hide">{{ product.title }}</h1>
+      
       <div class="photos">
         <div class="photos__item photos__item--main">
           {%- assign featured_image = current_variant.featured_image | default: product.featured_image -%}
@@ -84,11 +85,11 @@
           <div>Same or Next Day Shipping in the Continental USA</div>
         </div>
         <div class="detail-item">
-          <p><i class="fas fa-phone-volume"></i> 24/7 Customer Help</p>
+          <p><i class="fas fa-phone-volume"></i> 24/7 Customer Care</p>
           <div>Anytime, Anywhere, AnyQuestions. We are here for you</div>
         </div>
         <div class="detail-item">
-          <p><i class="fas fa-smile"></i> Happiness Guarantee</p>
+          <p><i class="fas fa-smile"></i> Happiness Guaranteed</p>
           <div>Full Refund & No Returns Necessary if You are Not Happy</div>
         </div>
       </div>
@@ -238,23 +239,8 @@
       <div id="chartPopup">{% render "intake-chart" %}</div>
       <div id="chartPopupBg"></div>
 
-      {% comment %} haianhxanh {% endcomment %}
-        <div class="logistics-details medium-up--hide">
-          <div class="detail-item">
-            <p><i class="fa fa-shipping-fast"></i> Fast 'n Free Shipping</p>
-            <div>Same or Next Day Shipping in the Continental USA</div>
-          </div>
-          <div class="detail-item">
-            <p><i class="fas fa-phone-volume"></i> 24/7 Customer Help</p>
-            <div>Anytime, Anywhere, AnyQuestions. We are here for you</div>
-          </div>
-          <div class="detail-item">
-            <p><i class="fas fa-smile"></i> Happiness Guarantee</p>
-            <div>Full Refund & No Returns Necessary if You are Not Happy</div>
-          </div>
-        </div>
 
-        <hr>
+      <hr>
 
         <div class="rte product-single__description" itemprop="description">
 
@@ -272,6 +258,26 @@
         {% if section.settings.social_sharing_products %}
           {% include 'social-sharing', share_title: product.title, share_permalink: product.url, share_image: product %}
         {% endif %}
+
+                {% comment %} haianhxanh {% endcomment %}
+        <div class="logistics-details medium-up--hide">
+          <div class="detail-item">
+            <p><i class="fa fa-shipping-fast"></i> Fast 'n Free Shipping</p>
+            <div>Same or Next Day Shipping in the Continental USA</div>
+          </div>
+          <div class="detail-item">
+            <p><i class="fas fa-phone-volume"></i> 24/7 Customer Care</p>
+            <div>Anytime, Anywhere, AnyQuestions. We are here for you</div>
+          </div>
+          <div class="detail-item">
+            <p><i class="fas fa-smile"></i> Happiness Guaranteed</p>
+            <div>Full Refund & No Returns Necessary if You are Not Happy</div>
+          </div>
+        </div>
+
+
+        <div class="reputon-amazon-reviews-widget" id="8394a700-0133-11ec-8ef8-f5de9e0673db" ></div>
+
       </div>
     </div>
 
@@ -386,7 +392,6 @@
     padding: 1rem;
 
     font-weight: bold;
-    font-style: italic;
 
 
   }
@@ -440,6 +445,27 @@
      width: 100%;
      height: 60%;
    } */
+
+
+ .swiper-button-next--gHD3s:after, .swiper-container-rtl--1bJGM .swiper-button-prev--1LvUb:after {
+  content: "\203A";
+  }
+  .swiper-button-prev--1LvUb:after, .swiper-container-rtl--1bJGM .swiper-button-next--gHD3s:after {
+  content: "\2039";
+  }
+.swiper-button-prev--1LvUb, .swiper-button-next--gHD3s {
+top: 39%;
+}
+.reputon-amazon-reviews-widget {
+margin-top: 2rem;
+}
+.reviews-holder--1TWSi.carousel--Km97P .single-review--20SDi .top-part--2JlPR .holder--2wuwx {
+padding: 8px;
+}
+.reviews-holder--1TWSi.carousel--Km97P .single-review--20SDi {
+padding: 0;
+}
+
 
 </style>
 

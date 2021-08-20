@@ -11,12 +11,30 @@
     </div>
   </div>
 
+
+  <div class="single-page__content content-links grid">
+    {% for block in section.blocks %}
+    {% if block.type == "links" %}
+      <div class="link-item grid__item medium-up--one-half small--one-whole">
+        <h5>{{ block.settings.url_desc }}</h5>
+          <a href="{{ block.settings.url_link }}" class="btn--secondary">
+            {% if block.settings.arrow_direction == "left" %} <span aria-hidden="true" class="arrow-move-left">←</span> {% endif %}
+            {{ block.settings.url_label }}
+             {% if block.settings.arrow_direction == "right" %} <span aria-hidden="true" class="arrow-move-right">→</span> {% endif %}
+          </a>
+      </div>
+    {% endif %}
+    {% endfor %}
+  </div>
+
   {% if section.blocks != blank %}
     <div class="image-gallery">
       {% for block in section.blocks %}
+      {% if block.type == "image" %}
       <div class="g-image item-{{forloop.index }}">
         <a href={{ block.settings.g_image_url }}><img src="{{ block.settings.g_image | img_url: '400x' }}" alt=""></a>
       </div>
+      {% endif %}
       {% endfor %}
     </div>
   {% endif %}
@@ -25,13 +43,6 @@
 <style>
   .main-content {
     margin-top: 0px;
-  }
-  .content-text {
-    padding: 7%;
-    border: 5px solid #ffc900;
-    border-radius: 30px;
-    text-align: justify;
-    background-color: white;
   }
 
   .section-block__title {
@@ -84,6 +95,10 @@
     font-size: 2rem;
     border: 2px solid #e70685;
     padding: 3rem 0;
+  }
+  .link-item {
+    text-align: center;
+    padding: 2rem 0;
   }
 
   /* .image-gallery {
@@ -168,6 +183,43 @@
           "label": "Product URL"
         }
       ]
+    },
+    {
+      "type": "links",
+      "name": "Links",
+      "settings": [
+        {
+          "type": "text",
+          "id": "url_desc",
+          "label": "URL description"
+        },
+        {
+          "type": "text",
+          "id": "url_label",
+          "label": "URL label"
+        },
+        {
+          "type": "url",
+          "id": "url_link",
+          "label": "Link"
+        },
+        {
+          "type": "select",
+          "id": "arrow_direction",
+          "label": "Select arrow direction",
+          "options": [
+            {
+              "value": "left",
+              "label": "Left"
+            },
+            {
+              "value": "right",
+              "label": "Right"
+            }
+          ],
+          "default": "right"
+        }
+      ]
     }
   ],
   "presets": [
@@ -176,6 +228,9 @@
       "blocks": [
         {
           "type": "image"
+        },
+        {
+          "type": "links"
         }
       ]
     }

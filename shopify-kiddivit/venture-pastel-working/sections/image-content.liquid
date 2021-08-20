@@ -20,18 +20,20 @@
                   <noscript>
                     <img src="{{ block.settings.image | img_url: '600x' }}" alt="{{ block.settings.image.alt }}" class="image-content__image">
                   </noscript>
-                  <div class="image-content__image-container">
-                    <div class="image-content__image-wrapper" style="padding-top:{{ 1 | divided_by: block.settings.image.aspect_ratio | times: 100}}%;">
-                      {% assign img_url = block.settings.image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' %}
-                      <img class="image-content__image lazyload"
-                        src="{{ block.settings.image | img_url: '300x300' }}"
-                        data-src="{{ img_url }}"
-                        data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 1944, 2048]"
-                        data-aspectratio="{{ block.settings.image.aspect_ratio }}"
-                        data-sizes="auto"
-                        alt="{{ block.settings.image.alt | escape }}">
+                  <a href="{{ block.settings.image_url }}">
+                    <div class="image-content__image-container">
+                      <div class="image-content__image-wrapper" style="padding-top:{{ 1 | divided_by: block.settings.image.aspect_ratio | times: 100}}%;">
+                        {% assign img_url = block.settings.image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' %}
+                        <img class="image-content__image lazyload"
+                          src="{{ block.settings.image | img_url: '300x300' }}"
+                          data-src="{{ img_url }}"
+                          data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 1944, 2048]"
+                          data-aspectratio="{{ block.settings.image.aspect_ratio }}"
+                          data-sizes="auto"
+                          alt="{{ block.settings.image.alt | escape }}">
+                      </div>
                     </div>
-                  </div>
+                  </a>
                 {% else %}
                   <div class="image-content__image">
                     {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
@@ -42,6 +44,7 @@
               <div class="flex__item image-content__text text-{{ block.settings.align }}">
                 <p class="h5">{{ block.settings.title | escape }}</p>
                 <div class="rte-setting">{{ block.settings.text }}</div>
+                <a href="{{ block.settings.btn_link }}"><button class="btn--secondary">{{ block.settings.btn_label }}</button></a>
               </div>
           {% endcase %}
         </div>
@@ -54,6 +57,11 @@
   </div>
 </div>
 
+<style>
+  .image-content__text .btn--secondary {
+    margin: 1rem 0 2rem 0;
+  }
+</style>
 
 
 {% schema %}
@@ -327,6 +335,17 @@
             }
           ],
           "default": "left"
+        },
+        {
+          "type": "text",
+          "id": "btn_label",
+          "label": "Button label",
+          "default": "Learn more"
+        },
+        {
+          "type": "url",
+          "id": "btn_link",
+          "label": "Button link"
         }
       ]
     },
@@ -384,6 +403,11 @@
             "zh-CN": "图片",
             "zh-TW": "圖片"
           }
+        },
+        {
+          "type": "url",
+          "id": "image_url",
+          "label": "Image URL"
         }
       ]
     }

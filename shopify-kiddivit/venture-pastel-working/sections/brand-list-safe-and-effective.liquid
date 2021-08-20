@@ -45,17 +45,19 @@
 
     <div class="flex flex--grid flex--grid-center no-metallic-taste">
       {% if section.settings.content != blank %}
-        <div class="safety-block__content">{{ section.settings.content }}</div>
+        <div class="safety-block__content one-whole medium-up--one-third">{{ section.settings.content }}</div>
       {% endif %}
 
       {% if section.settings.subtitle != blank %}
-        <div class="section-block__header-subtitle text-center">
-          <h4 class="h1--mini section-block__subtitle">{{ section.settings.subtitle | escape }}</h4>
+        <div class="one-whole medium-up--one-third">
+          <div class="section-block__header-subtitle text-center">
+            <h4 class="h1--mini section-block__subtitle">{{ section.settings.subtitle | escape }}</h4>
+          </div>
         </div>
       {% endif %}
   
       {% if section.settings.button != blank %}
-        <a class="hero-content__controls-item hero-content__controls-item--text hero-link-active" href="{{ section.settings.button_url }}">{{ section.settings.button }} <span aria-hidden="true" class="move-arrow">→</span></a>
+        <div class="one-whole medium-up--one-third"><div class="browse-all-btn"><a href="{{ section.settings.button_url }}"><button class="btn--secondary">{{ section.settings.button }} <span aria-hidden="true" class="arrow-move-right">→</span></button></a></div></div>
       {% endif %}
     </div>
 
@@ -146,6 +148,7 @@
   background-color: red;
   width: 200px;
   display: flex;
+  margin: 0 auto;
 }
 .h1--mini.section-block__subtitle {
   height: 100%;
@@ -184,17 +187,9 @@
     line-height: 2.5rem;
 }
 
-.move-arrow {
-  position: relative;
-  animation: movebutton 2s;
-  animation-iteration-count: infinite;
+.browse-all-btn {
+  text-align: center;
 }
-
-@keyframes movebutton {
-  from {left: 0px;}
-  to {left: 20px;}
-}
-
 
 
 </style>

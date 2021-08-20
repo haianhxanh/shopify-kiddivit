@@ -1833,7 +1833,7 @@ hr {
 }
 
 .flex--grid {
-  margin: 0 (-$grid-gutter / 2);
+  /* margin: 0 (-$grid-gutter / 2); haianhxanh */
   @include flex-wrap(wrap);
 
   > .flex__item {
@@ -3365,9 +3365,12 @@ input[type='search']::-webkit-search-cancel-button {
 .customer-login-links a {
   display: inline-block;
   color: $color-header-links;
-  color: $color-header-links-rgba;
+  {% comment %} color: $color-header-links-rgba; haianhxanh {% endcomment %}
+  color: green;
   padding: $gutter-site ($gutter-site / 2);
-  font-size: $font-size-button;
+  {% comment %} font-size: $font-size-button; haianhxanh {% endcomment %}
+  font-size: 1rem;
+  font-weight: bold;
 
   &:hover,
   &:focus {
@@ -4483,6 +4486,11 @@ shopify-payment-terms {
     height: 680px;
   }
 
+  /* haianhxanh */
+  @include media-query($large-up) {
+    height: 750px;
+  }
+
   &.hero--adapt {
     margin-bottom: 50px;
   }
@@ -4656,6 +4664,7 @@ shopify-payment-terms {
 
   @include media-query($medium-up) {
     bottom: 120px;
+    /* bottom: 70px; */
 
     .hero-wrapper--adapt & {
       bottom: 60px;
@@ -6862,77 +6871,178 @@ body {
 }
 }
 
-.site-footer__list-item {
-  margin-bottom: 2px; 
+
+/*================ HAIANHXANH OVERRIDES ================*/
+/* HAIANHXANH GENERAL */
+i.fas {
+  color: $color-header-links;
+  width: 20px;
 }
 
+.page-width .h1--mini {
+  color: #e70685;
+  font-weight: bold;
+}
+
+.arrow-move-right {
+  position: relative;
+  animation: moveright 2s;
+  animation-iteration-count: infinite;
+}
+.arrow-move-left {
+  position: relative;
+  animation: moveleft 2s;
+  animation-iteration-count: infinite;
+}
+@keyframes moveright {
+  from {
+    left: 0px;
+  }
+  to {
+    left: 20px;
+  }
+}
+@keyframes moveleft {
+  from {
+    right: 0px;
+  }
+  to {
+    right: 20px;
+  }
+}
+
+/* HAIANHXANH HEADER */
+@include media-query($medium-up) {
+  .shop-type {
+    margin-left: 10px;
+  }
+}
+  /* navigation */
+.nav-claims {
+  text-align: right;
+}
+.nav-claims a {
+  color: $color-hero-title-text;
+  padding: 0 0.5rem;
+  border-right: 1px solid;
+  font-size: 0.9rem;
+}
+.nav-claims a:last-of-type {
+  border-right: none;
+}
+@media only screen and (max-width: 465px) {
+  .site-header__upper.page-width {
+    padding: 0px;
+  }
+  .nav-claims a {
+    font-size: 0.7rem;
+  }
+}
+.small-heading-wrapper {
+  min-width: 250px;
+  padding: 1rem;
+  background-color: #fff;
+  display: inline-block;
+}
+
+/* HAIANHXANH HOMEPAGE */
+  /* banner */
+@media only screen and (min-width: 1500px) {
+  .hero-content .page-width {
+    margin-left: 20px;
+  }
+}
+@include media-query($small) {
+  .hero-content__title {
+    font-size: 1.5rem;
+  }
+  .hero-content__controls-item--count {
+    display: none;
+  }
+  .hero-content__controls-item--arrow button,
+  .hero-content__controls-item--pause button,
+  .hero-content__controls-item {
+    padding: 0px 5px;
+  }
+}
+
+  /* section after banner - early years */
+.early-years-block {
+  .flex__item:first-of-type {
+    z-index: 2;
+
+    @include media-query($medium-up) {
+      margin-bottom: -70px;
+    }
+  }
+  .flex__item:nth-of-type(2) {
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+}
+
+  /* section essectial line */
 .essential-line {
   max-width: 100%;
-
   .collection__cover {
     width: 100%;
     height: 320px;
     padding-left: 0;
   }
-
-  .collection-card__meta {  
+  .collection-card__meta {
     height: 350px;
     width: 100%;
     padding-top: 150px;
   }
-
   .collection-card:after {
     background-color: gray;
   }
-
   .section-block {
     background-color: transparent;
   }
-
   .collection__card {
     z-index: 9999999999;
   }
-
-  .collection-card {    
+  .collection-card {
     background-position: 70%;
     height: 450px;
     @include media-query($medium-up) {
-       background-attachment: fixed;
+      background-attachment: fixed;
     }
   }
-
 }
-
+  /* section our advantage */
 .our-advantage {
-
   @include media-query($medium-up) {
     padding-top: 5rem;
   }
-
   .flex__item {
     flex-direction: column;
     padding: 10px 20px;
   }
-
   .section-block {
     background-color: transparent;
   }
-
   .image-block img {
-    filter: invert(19%) sepia(93%) saturate(7239%) hue-rotate(318deg) brightness(93%) contrast(98%);
-
+    filter: invert(19%) sepia(93%) saturate(7239%) hue-rotate(318deg)
+      brightness(93%) contrast(98%);
   }
-
-  .caption {      
+  .caption {
     background-color: #029656;
     color: white;
+    font-size: 1.25rem;
   }
-
+  @include media-query($small) {
+    .flex__item--fixed {
+      padding-bottom: 2rem;
+    }
+  }
 }
 
+  /* section safety */
 .safety-block {
   .image-block img {
-    filter: invert(13%) sepia(56%) saturate(5188%) hue-rotate(229deg) brightness(81%) contrast(110%);
+    filter: invert(13%) sepia(56%) saturate(5188%) hue-rotate(229deg)
+      brightness(81%) contrast(110%);
   }
   .image-block {
     border: 5px solid #ffc900;
@@ -6945,55 +7055,30 @@ body {
     font-size: 1.3rem;
     margin-top: 2rem;
   }
-  .hero-link-active {
-    display: block;
-    margin: 0 auto;
-    text-align: center;
-    width: 250px;
-  }
   .safety-block__content {
     text-align: center;
     margin: 0 auto 2rem;
     width: 200px;
   }
-}
 
-.early-years-block {
-  .flex__item:first-of-type {
-    z-index: 2;
-    
-    @include media-query($medium-up) {
-      margin-bottom: -70px;
+  @include media-query($small) {
+    .no-metallic-taste {
+      padding: 3rem 0;
+      flex-direction: column;
     }
-
+    .no-metallic-taste .safety-block__content {
+      line-height: inherit;
+      width: 300px;
+      margin: 2rem auto;
+    }
+    .section-block__header-subtitle.text-center {
+      margin-bottom: 2rem;
+    }
   }
-  .flex__item:nth-of-type(2) {
-    background-color: rgba(255,255,255,0.8)
-  }
 }
 
-.nav-claims {
-  text-align: right;
-}
-
-.nav-claims a {
-  color: $color-hero-title-text;
-  padding: 0 0.5rem;
-  border-right: 1px solid;
-  font-size: 0.9rem;
-}
-
-.nav-claims a:last-of-type {
-  border-right: none;
-}
-
-.small-heading-wrapper {
-  min-width: 250px;
-  padding: 1rem;
-  background-color: #fff;
-  display: inline-block;
-}
-
+/* HAIANHXANH PAGES */
+  /* general */
 .single-page {
   .small--text-center {
     /* background-color: white; */
@@ -7001,7 +7086,7 @@ body {
     text-align: center;
     letter-spacing: 2rem;
     /* padding: 1rem;  */
-    color: #E70685;
+    color: #e70685;
   }
   .shopify-section {
     margin: 2rem 0;
@@ -7012,22 +7097,51 @@ body {
   .single-page__content {
     padding: 0 10%;
   }
-
+}
+.section-page-contact .content-text,
+.section-page-about .content-text {
+  padding: 7%;
+  border: 5px solid #ffc900;
+  border-radius: 30px;
+  text-align: justify;
+  background-color: white;
 }
 
+/* HAIANHXANH PRODUCT PAGE */
 .modal__close {
   color: #e70685;
 }
-
 .modal__close .icon {
   font-size: 3rem;
 }
-
-i.fas {
-  color: $color-header-links;
+.social-sharing {
+  text-align: center;
+}
+@include media-query($small) {
+  .product-single h1 {
+    text-align: center;
+  }
+}
+.product-recommendations .grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+@include media-query($small) {
+  .instafeed-container {
+    width: 30% !important;
+    padding-top: 30% !important;
+  }
 }
 
-.page-width .h1--mini {
-  color: #e70685;
-  font-weight: bold;
+/* HAIANHXANH FOOTER */
+.site-footer__list-item {
+  margin-bottom: 2px;
+}
+
+/* SMILES IO OVERRIDES */
+#smile-ui-container {
+  a {
+    color: $color-header-links;
+  }
 }

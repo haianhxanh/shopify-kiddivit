@@ -1,0 +1,135 @@
+<section class="section-page-contact">
+
+  <div class="single-page__content grid">
+
+      <div class="content-text grid__item medium-up--two-thirds">
+        <div class="block-contact"> 
+            {% for block in section.blocks %}
+                <p>
+                    <i class="fas {{ block.settings.contact_icon }}"></i> 
+                    {% case block.settings.contact_icon %}
+                    {% when "fa-phone-volume" %} 
+                        <a href="tel:{{ block.settings.contact_icon }}">{{ block.settings.contact_content }}</a>
+                    {% when "fa-envelope" %}
+                        <a href="mailto:{{block.settings.contact_content}}">{{ block.settings.contact_content }}</a>
+                    {% endcase %}
+                </p>
+            {% endfor %}
+        </div>
+
+        <p class="block-content">{{ section.settings.content }}</p>
+
+        <div class="block-content block-qr">
+            <a href="{{ section.settings.qr_code_url }}">
+                <img src="{{ section.settings.qr_code | img_url: "200x200" }}">
+                    <p>{{ section.settings.qr_code_note }}</p>
+            </a>
+        </div>
+    </div>
+
+    <div class="h1--mini section-block__title content-heading grid__item medium-up--one-third">
+      <div class="section-image">
+        <img src="{{ section.settings.image | img_url: 'master' }}" alt="">
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<style>
+    .block-contact {
+        text-align: center;
+        font-size: 1.4rem;
+    }
+    .content-text {
+        padding: 2rem;
+    }
+    .block-content {
+
+        max-width: 400px;
+        text-align: center;
+        margin: 0 auto;
+        padding: 2rem 0;
+
+    }
+    .section-image {
+        text-align: center;
+    }
+    .h1--mini img {
+        max-width: 70%;
+    }
+</style>
+
+{% schema %}
+{
+  "name": {
+    "en": "Contact"
+  },
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "html",
+      "id": "content",
+      "label": "Page Content",
+      "default": "Insert the content"
+    },
+    {
+      "type": "image_picker",
+      "id": "qr_code",
+      "label": "QR Code"
+    },
+    {
+        "type": "text",
+        "id": "qr_code_url",
+        "label": "Insert URL of QR code"
+    },
+    {
+       "type": "text",
+       "id": "qr_code_note",
+       "label": "Note for QR Code"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "contact",
+      "name": "Contact",
+      "settings": [
+        {
+          "type": "select",
+          "id": "contact_icon",
+          "label": "Icon",
+          "options": [
+            {
+              "value": "fa-phone-volume",
+              "label": "Phone"
+            },
+            {
+              "value": "fa-envelope",
+              "label": "Email"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "contact_content",
+          "label": "Contact info"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Contact",
+      "blocks": [
+        {
+          "type": "contact"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

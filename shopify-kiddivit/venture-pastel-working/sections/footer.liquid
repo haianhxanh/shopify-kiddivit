@@ -99,7 +99,13 @@
               <div class="qr_code">
                 <h4 class="h1 site-footer__section-title">{{ block.settings.qr_code_title }}</h4>
                 <div class="rte-setting">{{ block.settings.qr_code_text }}</div>
-                <img src="{{ block.settings.qr_code | img_url: '100x100'}}" alt="">
+                <a href="{{block.settings.qr_code_url}}"><img src="{{ block.settings.qr_code | img_url: '100x100'}}" alt=""></a>
+              </div>
+
+            {% when 'html' %}
+              <div class="site-footer__section">
+                <h4 class="h1 site-footer__section-title">{{ block.settings.title | escape }}</h4>
+                <div class="rte-setting">{{ block.settings.html_content }}</div>
               </div>
 
             {% when 'newsletter' %}
@@ -890,11 +896,32 @@
           }
         },
         {
+        "type": "text",
+        "id": "qr_code_url",
+        "label": "Insert URL of QR code"
+        },
+        {
           "type": "text",
           "id": "qr_code_text",
           "label": {
             "en": "Text for QR Code"
           }
+        }
+      ]
+    },
+    {
+      "type": "html",
+      "name": "HTML",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "html",
+          "id": "html_content",
+          "label": "HTML Content"
         }
       ]
     },

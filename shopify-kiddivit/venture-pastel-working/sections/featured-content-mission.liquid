@@ -86,6 +86,13 @@
     justify-content: space-between;
   }
 
+  @media only screen and (max-width: 750px) {
+    .featured-content {
+      background-attachment: revert;
+      padding: 0 20px;
+    }
+  }
+
   .our-mission {
     max-width: 100%
   }
@@ -104,6 +111,33 @@
     color: #041e8b;
     text-shadow: 0px 0px 6px rgba(255,255,255,0.7);
   }
+
+   @media only screen and (max-width: 750px) {
+    .mission-content {
+      align-items: flex-start;
+      max-width: revert;
+      padding: 1rem;
+      background-color: rgba(255,255,255,0.7);
+     }
+    .mission-content p {
+      font-size: 1.2rem;
+      line-height: 1.1;
+    }
+    .featured-content {
+      background-position: left center !important;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+    }
+     .emphasized-title-wrapper {
+      word-spacing: normal;
+      max-width: revert;
+      padding-top: 0;
+      text-align: center;
+    }
+
+  }
+
 </style>
 
 {% schema %}

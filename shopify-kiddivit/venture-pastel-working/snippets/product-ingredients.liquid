@@ -2,7 +2,7 @@
   <div class="list-ingredients grid">
     {% assign ingredients = product.metafields.global.ingredients.data %}
     {% for i in ingredients %}
-    <div class="grid__item medium-up--one-third small--one-whole">
+    <div class="grid__item medium-up--one-fifth small--one-whole">
           <div class="ingredient-item ingredient__image">
             <img src="{{ i.image }}"></img>
           </div>
@@ -20,7 +20,7 @@
 <style>
   .ingredient-item {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     margin: 1rem 0;
     text-align: center;
   }
