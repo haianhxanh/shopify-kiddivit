@@ -3,9 +3,9 @@
     "color_header_bg": "#ecf7de",
     "color_header_links": "#041e8b",
     "color_body_bg": "#f7f7f7",
-    "color_content_bg": "#fff",
+    "color_content_bg": "#ffffff",
     "color_body_headings": "#030303",
-    "color_body_text": "#666",
+    "color_body_text": "#666666",
     "color_button_bg": "#ffc900",
     "color_button_text": "#041e8b",
     "color_footer_bg": "#ecf7de",
@@ -27,8 +27,11 @@
     "social_pinterest_link": "https:\/\/www.pinterest.com\/kiddivit\/",
     "social_instagram_link": "https:\/\/www.instagram.com\/kiddivit\/",
     "favicon": "shopify:\/\/shop_images\/Favicon_Simple.png",
-    "checkout_accent_color": "#006eff",
-    "checkout_button_color": "#006eff",
+    "checkout_header_image": "shopify:\/\/shop_images\/luca-upper-Z-4kOr93RCI-unsplash.jpg",
+    "checkout_logo_image": "shopify:\/\/shop_images\/Kiddivit_Logo_No_Shadow.png",
+    "checkout_body_background_color": "#ecf7de",
+    "checkout_accent_color": "#041e8b",
+    "checkout_button_color": "#e70685",
     "checkout_banner_background_color": "#fff",
     "checkout_call_to_action_color": "#006eff",
     "checkout_use_header_image": false,
@@ -40,7 +43,7 @@
           "placeholder-0": {
             "type": "slide",
             "settings": {
-              "image": "shopify:\/\/shop_images\/people-smile-at-a-small-baby-the-woman-is-holding-up.jpg",
+              "image": "shopify:\/\/shop_images\/a-young-family-sitting-together-on-a-beige-couch.jpg",
               "image_position": "center center",
               "title": "A healthy start!",
               "button_label": "Let's start today for a healthy tomorrow",
@@ -51,7 +54,7 @@
             "type": "slide",
             "settings": {
               "image": "shopify:\/\/shop_images\/father-holding-baby-daughter.jpg",
-              "image_position": "center center",
+              "image_position": "center top",
               "title": "Nutritions every baby needs",
               "button_label": "Shop now",
               "button_link": "shopify:\/\/collections\/all"
@@ -95,7 +98,16 @@
             "settings": {
               "qr_code": "shopify:\/\/shop_images\/Business_Whatsapp_QR_Code_BLACK.png",
               "qr_code_title": "We're on whatsapp :)",
+              "qr_code_url": "https:\/\/api.whatsapp.com\/message\/DWCT6RRE7R2OC1",
               "qr_code_text": "Connect with us for any questions related to our products, baby care, we will gladly help you out!"
+            }
+          },
+          "f14a5771-1d19-4d24-9f8b-5a5dd137e073": {
+            "type": "html",
+            "disabled": true,
+            "settings": {
+              "title": "Find us on amazon",
+              "html_content": "<div class=\"reputon-amazon-reviews-widget\" id=\"6fa803b0-0131-11ec-8ef8-f5de9e0673db\" style=\"display: flex; justify-content: center;\"><\/div>"
             }
           }
         },
@@ -103,7 +115,8 @@
           "linklist",
           "f29b8cb9-93a5-45a6-8da3-d2aad909a240",
           "social",
-          "7bd831aa-3f72-4be5-b1cc-b559483dba23"
+          "7bd831aa-3f72-4be5-b1cc-b559483dba23",
+          "f14a5771-1d19-4d24-9f8b-5a5dd137e073"
         ],
         "settings": {
           "disclaimer_text": "<p><em>*These Statements Have Not Been Evaluated By The Food And Drug Administration. These Products Are Not Intended To Diagnose, Treat, Cure, Or Prevent Any Disease.<\/em><\/p>",
@@ -155,7 +168,8 @@
           "image-content-0": {
             "type": "image_block",
             "settings": {
-              "image": "shopify:\/\/shop_images\/tanaphong-toochinda-GagC07wVvck-unsplash.jpg"
+              "image": "shopify:\/\/shop_images\/Landing_Banner_Image_-_Full_Product_Line.png",
+              "image_url": "shopify:\/\/collections\/all"
             }
           },
           "image-content-1": {
@@ -163,7 +177,9 @@
             "settings": {
               "title": "Formulated for the Early Years",
               "text": "<p>We meticulously developed our baby liquid drops with the highest quality ingredients and safest packaging for your baby’s most crucial growth period. We solemnly promise to ensure the purity and potency in each of our product so your baby will have <em>A Healthy Start<\/em>!<\/p>",
-              "align": "left"
+              "align": "left",
+              "btn_label": "Learn more",
+              "btn_link": "shopify:\/\/pages\/about"
             }
           }
         },
@@ -204,6 +220,8 @@
           "1156ca0c-f3fc-4c08-877a-7b3af1efa61e"
         ],
         "settings": {
+          "shop_type": "Baby liquid drops",
+          "logo": "shopify:\/\/shop_images\/Kiddivit_Logo_No_Shadow.png",
           "logo_max_width": "300",
           "main_linklist": "main-menu",
           "promo_bar_enable": true,
@@ -348,7 +366,7 @@
           "3ac9407c-0cd8-4050-a168-c9ef12a000a8": {
             "type": "logo",
             "settings": {
-              "image": "shopify:\/\/shop_images\/icons-07.png",
+              "image": "shopify:\/\/shop_images\/icons-07_9fb93543-3347-477a-bc65-ec71472cc603.png",
               "heading": "",
               "caption": "",
               "link": ""
@@ -367,7 +385,7 @@
           "title": "Safe and effective",
           "subtitle": "No Metallic Aftertaste",
           "content": "We made sure our products taste great so your baby will smile every time they see it.",
-          "button": "Browse all products",
+          "button": "Browse all",
           "button_url": "shopify:\/\/collections\/all"
         }
       },
@@ -383,12 +401,157 @@
       "16275096004789454b": {
         "type": "featured-content-mission",
         "settings": {
-          "content": "Kiddivit is on a GLOBAL mission to provide every baby the ESSENTIAL vitamins & nutrients they need to grow strong, healthy, and happy!",
           "title": "Our mission",
+          "content": "Kiddivit is on a GLOBAL mission to provide every baby the ESSENTIAL vitamins & nutrients they need to grow strong, healthy, and happy!",
           "subtext": "Shop now",
           "link": "",
           "image": "shopify:\/\/shop_images\/mi-pham-FtZL0r4DZYk-unsplash.jpg",
           "image_align": "center center"
+        }
+      },
+      "page-about": {
+        "type": "page-about",
+        "blocks": {
+          "c536a3e5-40f5-4c23-85d6-3d727cccb9df": {
+            "type": "image",
+            "settings": {
+              "g_image": "shopify:\/\/shop_images\/KIDV-1_Zinc_2oz_Triple.png",
+              "g_image_url": "shopify:\/\/products\/baby-zinc-2-fl-oz"
+            }
+          },
+          "92435cd3-73e8-4896-a81e-e204775990af": {
+            "type": "image",
+            "settings": {
+              "g_image": "shopify:\/\/shop_images\/KIDV-3_Iron_2oz_X.png",
+              "g_image_url": "shopify:\/\/products\/baby-iron-2-fl-oz"
+            }
+          },
+          "e63ff7fc-482e-42bd-97ad-9b2fcbbbd62e": {
+            "type": "image",
+            "settings": {
+              "g_image": "shopify:\/\/shop_images\/KIDV-5_AD_2oz_SnE.png",
+              "g_image_url": "shopify:\/\/products\/baby-vit-ad-2-fl-oz"
+            }
+          },
+          "7e473739-7f03-472c-a507-669747f88c5d": {
+            "type": "image",
+            "settings": {
+              "g_image": "shopify:\/\/shop_images\/KIDV-7_Lactase_1oz_X.png",
+              "g_image_url": "shopify:\/\/products\/baby-lactase-1-fl-oz"
+            }
+          },
+          "5ad00b72-6e82-4afc-b806-72f9fad221d5": {
+            "type": "image",
+            "settings": {
+              "g_image": "shopify:\/\/shop_images\/KIDV-4_Calcium_4oz_Triple.png",
+              "g_image_url": "shopify:\/\/products\/baby-calcium-4-fl-oz"
+            }
+          },
+          "735e0aff-69b7-444a-9310-334c1c05b444": {
+            "type": "links",
+            "settings": {
+              "url_desc": "Still looking for more information?",
+              "url_label": "Checkout our advantage",
+              "url_link": "shopify:\/\/pages\/our-advantage",
+              "arrow_direction": "left"
+            }
+          },
+          "ce3c1843-2464-4d3d-a168-acf6acbbefd1": {
+            "type": "links",
+            "settings": {
+              "url_desc": "Can't wait to try our products?",
+              "url_label": "Let's get started today!",
+              "url_link": "shopify:\/\/collections\/all",
+              "arrow_direction": "right"
+            }
+          }
+        },
+        "block_order": [
+          "c536a3e5-40f5-4c23-85d6-3d727cccb9df",
+          "92435cd3-73e8-4896-a81e-e204775990af",
+          "e63ff7fc-482e-42bd-97ad-9b2fcbbbd62e",
+          "7e473739-7f03-472c-a507-669747f88c5d",
+          "5ad00b72-6e82-4afc-b806-72f9fad221d5",
+          "735e0aff-69b7-444a-9310-334c1c05b444",
+          "ce3c1843-2464-4d3d-a168-acf6acbbefd1"
+        ],
+        "settings": {
+          "title": "Hello and Welcome to Kiddivit! <br> The baby liquid drops specialist.",
+          "content": "<p>We specifically formulated our products for babies and infants under 4 years to provide them the essential vitamins and nutrients their body needs during their most important growth and development period. Here at Kiddivit, we are all about babies and providing them the building blocks they require to have A Healthy Start while also providing parents a safe and effective products for their growing babies. Our products are simple and easy to use, simply one dropper (1 mL) per day to meet all, if not most, of the recommended daily vitamins and nutrients intake your baby needs. <\/p>\n\n<p>We are on a global mission to provide every baby the essential vitamins &amp; nutrients they need to grow strong, healthy, and happy! Every single bottle of Kiddivit is manufactured in a state of the art, cGMP-compliant, and NSF 3rd party inspected facility in the USA that have been approved by both the Federal Drug Administration as well as state health authority to ensure all our products meet the world standards and are safe to be consumed. <\/p>\n\n<p>All of our products are formulated using premium quality ingredients. It is our solemn promise to ensure the purity and potency in each of our products so your baby will have A Healthy Start!<\/p>",
+          "image": "shopify:\/\/shop_images\/Baby-Eart-About-Yellow.png"
+        }
+      },
+      "page-faq": {
+        "type": "page-faq",
+        "settings": {
+          "title": "If you have a question that isn't answered here, please <a href=\"\/pages\/contact\">contact us<\/a>.",
+          "content": "Write something about your brand",
+          "image": "shopify:\/\/shop_images\/baby_5-01.png"
+        }
+      },
+      "page-advantage": {
+        "type": "page-advantage",
+        "blocks": {
+          "1b0e4b3f-2dd1-4be3-9556-65d4a957b261": {
+            "type": "logo",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Chicory_Root.jpg",
+              "heading": "Inulin infused",
+              "caption": "<p>Inulin is a starchy substance found in a wide variety of fruits, vegetables, and herbs. Inulin is a great source of fiber and prebiotic for kids who are picky eaters when it comes to eating green fiber rich foods.<\/p>"
+            }
+          },
+          "3c2e3285-c5c5-475e-aa40-ca4a2799b146": {
+            "type": "logo",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Amber_Glass_Bottle.jpg",
+              "heading": "Glass Bottle",
+              "caption": "<p>Unlike plastic bottles which might have harmful chemical such as BPA, glass bottles are free of any harmful materials. In addition, our amber glass bottles also provide extra protection from sunlight and heat.<\/p>"
+            }
+          },
+          "f689a198-c5e5-4870-a438-0da70e05b107": {
+            "type": "logo",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Sugar_Bad.png",
+              "heading": "Sugar Free",
+              "caption": "<p>Sugar has no nutritional value and is an empty calorie. Consuming empty calories undermines the health benefits of consuming other foods that do have nutritional value. Sugar may also lead to imbalances, which can lead to further health complications as your baby develops.<\/p>"
+            }
+          }
+        },
+        "block_order": [
+          "1b0e4b3f-2dd1-4be3-9556-65d4a957b261",
+          "3c2e3285-c5c5-475e-aa40-ca4a2799b146",
+          "f689a198-c5e5-4870-a438-0da70e05b107"
+        ],
+        "settings": {}
+      },
+      "page-contact": {
+        "type": "page-contact",
+        "blocks": {
+          "bde1eff5-eed0-4528-94a2-08f508ffc027": {
+            "type": "contact",
+            "settings": {
+              "contact_icon": "fa-phone-volume",
+              "contact_content": "+1 (949) 632-5225"
+            }
+          },
+          "477f560a-5ac3-4a3d-92da-199ebb1ef0f0": {
+            "type": "contact",
+            "settings": {
+              "contact_icon": "fa-envelope",
+              "contact_content": "hello@kiddivit.com"
+            }
+          }
+        },
+        "block_order": [
+          "bde1eff5-eed0-4528-94a2-08f508ffc027",
+          "477f560a-5ac3-4a3d-92da-199ebb1ef0f0"
+        ],
+        "settings": {
+          "image": "shopify:\/\/shop_images\/baby_and_icons_vector_file-01.png",
+          "content": "For a faster response we suggest you directly message us on WhatsApp! For anything else, give us a call or send us an email. We are always here for you.",
+          "qr_code": "shopify:\/\/shop_images\/Business_Whatsapp_QR_Code_BLACK.png",
+          "qr_code_url": "https:\/\/api.whatsapp.com\/message\/DWCT6RRE7R2OC1",
+          "qr_code_note": "Scan or Click"
         }
       }
     },
