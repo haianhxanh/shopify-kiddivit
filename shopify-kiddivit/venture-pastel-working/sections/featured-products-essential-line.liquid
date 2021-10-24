@@ -39,7 +39,7 @@
       </div>
 
       <div class="grid grid--no-gutters grid--uniform collection">
-        {% for product in collection.products limit: product_limit %}
+        {% for product in collection.products limit: 4 %}
           <div class="grid__item small--one-half medium-up--one-quarter collection__card">
             {% include 'product-card', product: product, collection: collection %}
           </div>

@@ -1,37 +1,41 @@
 <section class="section-page-contact">
 
-  <div class="single-page__content grid">
+  <div class="single-page__content">
 
-      <div class="content-text grid__item medium-up--two-thirds">
-        <div class="block-contact"> 
-            {% for block in section.blocks %}
-                <p>
-                    <i class="fas {{ block.settings.contact_icon }}"></i> 
-                    {% case block.settings.contact_icon %}
-                    {% when "fa-phone-volume" %} 
-                        <a href="tel:{{ block.settings.contact_icon }}">{{ block.settings.contact_content }}</a>
-                    {% when "fa-envelope" %}
-                        <a href="mailto:{{block.settings.contact_content}}">{{ block.settings.contact_content }}</a>
-                    {% endcase %}
-                </p>
-            {% endfor %}
+      <div class="content-text">
+        <div class="content-text__item">
+          <div class="block-contact"> 
+              {% for block in section.blocks %}
+                  <p>
+                      <i class="fas {{ block.settings.contact_icon }}"></i> 
+                      {% case block.settings.contact_icon %}
+                      {% when "fa-phone-volume" %} 
+                          <a href="tel:{{ block.settings.contact_icon }}">{{ block.settings.contact_content }}</a>
+                      {% when "fa-envelope" %}
+                          <a href="mailto:{{block.settings.contact_content}}">{{ block.settings.contact_content }}</a>
+                      {% endcase %}
+                  </p>
+              {% endfor %}
+          </div>
+  
+          <p class="block-content">{{ section.settings.content }}</p>
+  
+          <div class="block-content block-qr">
+              <a href="{{ section.settings.qr_code_url }}">
+                  <img src="{{ section.settings.qr_code | img_url: "200x200" }}">
+                      <p>{{ section.settings.qr_code_note }}</p>
+              </a>
+          </div>
         </div>
 
-        <p class="block-content">{{ section.settings.content }}</p>
 
-        <div class="block-content block-qr">
-            <a href="{{ section.settings.qr_code_url }}">
-                <img src="{{ section.settings.qr_code | img_url: "200x200" }}">
-                    <p>{{ section.settings.qr_code_note }}</p>
-            </a>
+        <div class="h1--mini section-block__title content-heading">
+            <div class="section-image">
+              <img src="{{ section.settings.image | img_url: 'master' }}" alt="">
+            </div>
         </div>
     </div>
 
-    <div class="h1--mini section-block__title content-heading grid__item medium-up--one-third">
-      <div class="section-image">
-        <img src="{{ section.settings.image | img_url: 'master' }}" alt="">
-      </div>
-    </div>
   </div>
 
 </section>
@@ -39,11 +43,40 @@
 <style>
     .block-contact {
         text-align: center;
-        font-size: 1.4rem;
+        font-size: 1.2rem;
+    }
+
+     @media only screen and (min-width: 750px) {
+       .content-text__item {
+         width: 50%;
+         display: flex;
+        flex-direction: column;
+        justify-content: center;
+       }
+     }
+
+    @media only screen and (max-width: 749px) {
+      .content-text {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .section-block__title {
+        order: 1;
+      }
+      .content-text__item {
+        order: 2;
+      }
+      .h1--mini img {
+        max-width: 50% !important;
+      }
+
     }
     .content-text {
-        padding: 2rem;
+        padding: 2rem !important;
+        display: flex;
     }
+
+
     .block-content {
 
         max-width: 400px;
@@ -56,7 +89,7 @@
         text-align: center;
     }
     .h1--mini img {
-        max-width: 70%;
+        max-width: 60%;
     }
 </style>
 

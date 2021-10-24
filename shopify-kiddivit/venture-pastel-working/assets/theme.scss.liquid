@@ -6918,6 +6918,13 @@ i.fas {
   }
 }
   /* navigation */
+
+@include media-query($small) {
+  .nav-claims {
+    text-align: center !important;
+  }
+}
+
 .nav-claims {
   text-align: right;
 }
@@ -6977,6 +6984,10 @@ i.fas {
   }
   .flex__item:nth-of-type(2) {
     background-color: rgba(255, 255, 255, 0.8);
+  }
+
+  .rte-setting p {
+    text-align: justify;
   }
 }
 

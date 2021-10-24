@@ -21,7 +21,9 @@
       <div class="photos">
         <div class="photos__item photos__item--main">
           {%- assign featured_image = current_variant.featured_image | default: product.featured_image -%}
-          {%- for image in product.images -%}
+
+          {% assign images = product.media | where: "media_type", "image" %}
+          {%- for image in images -%}
             <div class="product-single__photo product__photo-container product__photo-container-{{ section.id }} js{% unless image == featured_image %} hide{% endunless %}"
                  id="ProductPhoto"
                  style="max-width: {% include 'image-width' with image: image, width: 480 %}px;"
@@ -40,19 +42,59 @@
               </a>
             </div>
           {%- endfor -%}
+
+        {% assign videos = product.media | where: "media_type", "video" %}
+            {% for video in videos %}
+
+            <div class="product-single__photo product-single__video product__photo-container product__photo-container-{{ section.id }} js{% unless video == featured_image %} hide{% endunless %}"
+                 id="ProductPhoto"
+                 style="max-width: {% include 'image-width' with image: image, width: 480 %}px;"
+                 data-image-id="{{ video.id }}"
+              >
+              <a 
+              {% for source in video.sources %}
+              src="{{ source.url }}"
+                {% endfor %}
+              "
+                 class="js-modal-open-product-modal product__photo-wrapper product__photo-wrapper-{{ section.id }}"
+                 style="padding-top:{{ 1 | divided_by: image.aspect_ratio | times: 100}}%;">
+                <video width="100%" height="auto" controls autoplay muted>
+                {% for source in video.sources %}
+                <source src="{{ source.url }}" type="video/mp4">
+                {% endfor %}
+              </video>
+              </a>
+            </div>
+
+        {% endfor %}
+
           <noscript>
             <a href="{{ featured_image | img_url: '1024x1024' }}">
               <img src="{{ featured_image | img_url: product_image_size }}" alt="{{ featured_image.alt | escape }}" id="ProductPhotoImg-{{ section.id }}">
             </a>
           </noscript>
         </div>
+
         {% if product.images.size > 1 %}
           <div class="photos__item photos__item--thumbs">
             <div class="product-single__thumbnails product-single__thumbnails-{{ section.id }}{% unless product.images.size > 2 %} product-single__thumbnails--static{% endunless %}">
-              {% for image in product.images %}
+
+              {% assign images = product.media | where: "media_type", "image" %}
+              {% for image in images %}
                 <div class="product-single__thumbnail-item product-single__thumbnail-item-{{ section.id }}{% if image == featured_image %} is-active{% endif %}" data-image-id="{{ image.id }}">
                   <a href="{{ image.src | img_url: product_image_size }}" data-zoom="{{ image.src | img_url: '1024x1024' }}" class="product-single__thumbnail product-single__thumbnail-{{ section.id }}">
                     <img src="{{ image.src | img_url: '160x160' }}" alt="{{ image.alt | escape }}">
+                  </a>
+                </div>
+              {% endfor %}
+
+              {% assign videos = product.media | where: "media_type", "video" %}
+              {% for video in videos %}
+                <div class="product-single__thumbnail-item product-single__thumbnail-item__video product-single__thumbnail-item-{{ section.id }}" data-image-id="{{ video.id }}">
+                  <a href="{{ video.src }}" data-zoom="{{ image.src | img_url: '1024x1024' }}" class="product-single__thumbnail product-single__thumbnail-{{ section.id }}">
+                    <div class="video-thumbnail__icon"><i class="fas fa-play-circle"></i>
+                    <span class="small--hide">Video</span>
+                    </div>
                   </a>
                 </div>
               {% endfor %}
@@ -183,7 +225,7 @@
         {% capture "form_id" %}AddToCartForm-{{ section.id }}{%- endcapture %}
 
         {% form 'product', product, class:form_class, id:form_id %}
-          {{ form | payment_terms }}
+          <!-- {{ form | payment_terms }} -->
           {% unless product.has_only_default_variant %}
             {% for option in product.options_with_values %}
               <div class="selector-wrapper js product-form__item">
@@ -287,6 +329,26 @@
 </div>
 
 <style>
+  .product-single__thumbnail-item__video .product-single__thumbnail {
+    padding: 10px;
+  }
+  .video-thumbnail__icon {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  .fas.fa-play-circle {
+    color: gray;
+    width: 30px;
+    font-size: 1.5rem;
+  }
+  @media only screen and (max-width: 453px ){
+    .product-single__thumbnail-item {
+    padding: 5px;
+  }
+  }
+
   .logistics-details {
     margin: 1rem 0;
   }

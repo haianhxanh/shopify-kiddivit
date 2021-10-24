@@ -3154,7 +3154,7 @@ theme.Product = (function () {
           dots: false,
           infinite: false,
           autoplay: false,
-          slidesToShow: 5,
+          slidesToShow: 6,
           slidesToScroll: 3,
           vertical: true,
           verticalSwiping: true,

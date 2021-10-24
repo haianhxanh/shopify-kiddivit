@@ -1,8 +1,11 @@
+{% section 'product-template' %}
+
+{% render 'shogun-products', content: product %}
+{{product.metafields.shogun.above}}
 {% comment %}
   The contents of the product.liquid template can be found in /sections/product-template.liquid
 {% endcomment %}
 
-{% section 'product-template' %}
 {% render 'product-ingredients'%}
 {% render 'product-howtouse' %}
 {% section 'product-recommendations' %}
@@ -29,3 +32,4 @@
 
 <div id="aliexpress-review-wrapper-sp" style="float: left; clear: both; width: 100%" data-id="{{product.id}}" data-shop="kiddivit.myshopify.com" data-shopId="54124"></div> 
   <div id='Areviewsapp' class='page-full'>{%  render 'aliexpress_reviews' , product: product %}</div>
+{{product.metafields.shogun.below}}
